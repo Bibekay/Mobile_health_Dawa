@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/linearlayout"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+       android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="32dp">
+
+        <TextView
+            android:id="@+id/tvdashboard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="monospace"
+            android:text="My Dashboard"
+            android:textColor="@color/colorWhite"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/tvwelcome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Welcome, "
+            android:textSize="14sp"
+            android:layout_marginTop="6dp"
+            android:layout_below="@+id/tvdashboard"
+            android:textColor="@color/colorWhite"/>
+
+        <TextView
+            android:id="@+id/txtfirstname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Name, "
+            android:textSize="14sp"
+            android:layout_marginTop="6dp"
+            android:layout_below="@+id/tvdashboard"
+            android:layout_toEndOf="@+id/tvwelcome"
+            android:textColor="@color/colorWhite"
+            android:layout_toRightOf="@+id/tvwelcome" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/imgProfilee"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/noimage"
+            android:layout_alignParentRight="true"/>
+
+    </RelativeLayout>
+
+        //next
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:background="#FFFFFF"/>
+        //next
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="0dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="3dp">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                app:cardElevation="6dp"
+                app:cardCornerRadius="12dp"
+                android:layout_margin="12dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_row="0"
+                    android:layout_column="0"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/imgStopwatch"
+                        android:layout_width="40dp"
+                        android:layout_height="50dp"
+                        android:src="@drawable/stopwatch"
+                        android:layout_marginLeft="10dp"
+                        android:layout_alignParentRight="false"/>
+
+                    <TextView
+                        android:id="@+id/tvstopwatch"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Stop\nWatch"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginLeft="10dp"
+                        android:textSize="12sp"
+                        android:textColor="@color/colorBlack"
+                        android:textStyle="bold"
+                        android:layout_below="@+id/imgStopwatch"/>
+
+                    <ImageView
+                        android:id="@+id/imgHealthrecord"
+                        android:layout_width="40dp"
+                        android:layout_height="50dp"
+                        android:src="@drawable/healthrecord"
+                        android:layout_toRightOf="@+id/imgStopwatch"
+                        android:layout_marginLeft="55dp"
+                        android:layout_alignParentRight="false"/>
+
+                    <TextView
+                        android:id="@+id/tvhealthrecord"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Health\nRecords"
+                        android:layout_marginTop="5dp"
+                        android:textSize="12sp"
+                        android:textColor="@color/colorBlack"
+                        android:textStyle="bold"
+                        android:layout_marginLeft="65sp"
+                        android:layout_below="@+id/imgHealthrecord"
+                        android:layout_toRightOf="@+id/tvstopwatch"/>
+
+                    <ImageView
+                        android:id="@+id/imgQrScan"
+                        android:layout_width="40dp"
+                        android:layout_height="50dp"
+                        android:src="@drawable/scannerqr"
+                        android:layout_toRightOf="@+id/imgHealthrecord"
+                        android:layout_marginLeft="60dp"
+                        android:layout_alignParentRight="false"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="QR\nScanner"
+                        android:layout_marginTop="5dp"
+                        android:textSize="12sp"
+                        android:textColor="@color/colorBlack"
+                        android:textStyle="bold"
+                        android:layout_marginLeft="60sp"
+                        android:layout_below="@+id/imgQrScan"
+                        android:layout_toRightOf="@+id/tvhealthrecord"/>
+
+                    <ImageView
+                        android:id="@+id/imgEmergencyCall"
+                        android:layout_width="40dp"
+                        android:layout_height="50dp"
+                        android:src="@drawable/emergencycall"
+                        android:layout_marginRight="10dp"
+                        android:layout_alignParentRight="true"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Emergency\n        Cal"
+                        android:layout_marginTop="5dp"
+                        android:textSize="12sp"
+                        android:textColor="@color/colorBlack"
+                        android:textStyle="bold"
+                        android:layout_below="@+id/imgEmergencyCall"
+                        android:layout_alignParentRight="true"/>
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+        </RelativeLayout>
+        //next
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="10dp"
+            android:background="#FFFFFF"
+            android:layout_marginBottom="10dp"/>
+
+        //next
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="15px"
+            android:alignmentMode="alignMargins"
+            android:columnCount="2"
+            android:columnOrderPreserved="false"
+            android:rowCount="2">
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_margin="12dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="6dp">
+
+                <LinearLayout
+                    android:id="@+id/llFootstep"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_row="0"
+                    android:layout_column="0"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <ImageView
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:src="@drawable/footstep" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:fontFamily="serif-monospace"
+                        android:text="Foot\nSteps"
+                        android:textAllCaps="true"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                app:cardElevation="6dp"
+                app:cardCornerRadius="12dp"
+                android:layout_margin="12dp">
+
+                <LinearLayout
+                    android:id="@+id/llBmiScale"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_row="0"
+                    android:layout_column="0"
+                    android:gravity="center"
+                    android:padding="16dp"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:src="@drawable/bmiscale"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="BMI\nScale"
+                        android:layout_marginTop="12dp"
+                        android:textSize="15sp"
+                        android:textColor="@color/colorBlack"
+                        android:textAllCaps="true"
+                        android:textStyle="bold"
+                        android:fontFamily="serif-monospace"/>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                app:cardElevation="6dp"
+                app:cardCornerRadius="12dp"
+                android:layout_margin="12dp">
+
+                <LinearLayout
+                    android:id="@+id/llDocAppointment"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_row="0"
+                    android:layout_column="0"
+                    android:gravity="center"
+                    android:padding="16dp"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:src="@drawable/docappoint"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Doctor\nAppoint"
+                        android:layout_marginTop="12dp"
+                        android:textSize="15sp"
+                        android:textColor="@color/colorBlack"
+                        android:textAllCaps="true"
+                        android:textStyle="bold"
+                        android:fontFamily="serif-monospace"/>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                app:cardElevation="6dp"
+                app:cardCornerRadius="12dp"
+                android:layout_margin="12dp">
+
+                <LinearLayout
+                    android:id="@+id/llHealthQuiz"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_row="0"
+                    android:layout_column="0"
+                    android:gravity="center"
+                    android:padding="16dp"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:src="@drawable/quiz"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Health\nQuiz"
+                        android:layout_marginTop="12dp"
+                        android:textSize="15sp"
+                        android:textColor="@color/colorBlack"
+                        android:textAllCaps="true"
+                        android:textStyle="bold"
+                        android:fontFamily="serif-monospace"/>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+        </GridLayout>
+
+    </LinearLayout>
+    </ScrollView>
+</RelativeLayout>
